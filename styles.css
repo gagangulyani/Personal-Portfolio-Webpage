@@ -29,6 +29,21 @@ body {
 .navbar-brand {
   font-size: 2rem;
 }
+
+@media (max-width: 787px) {
+  #navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  #navbar div {
+    margin-left: unset;
+    padding-bottom: 1rem;
+  }
+  #navbar div .nav-link {
+      margin: 0;
+      font-size: 1.2rem;
+  }
+}
 #welcome-section {
   display: flex;
   flex-direction: column;
@@ -54,11 +69,12 @@ body {
   background-color: black;
   color: white;
   margin: 0;
-  position: absolute;
+  position: relative;
   z-index: 4;
   padding-top: 6rem;
+  padding-bottom: 6rem;
 }
-
+#contact header h1,
 #about header h1,
 #projects header h1 {
   font-size: 2rem;
@@ -82,7 +98,7 @@ body {
   width: 100%;
 }
 
-.project {
+.project-tile {
   color: white;
   width: 90%;
   margin-top: 1rem;
@@ -156,7 +172,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .project {
+  .project-tile {
     flex-direction: column;
   }
   .project-details,
@@ -170,9 +186,10 @@ body {
   margin-right: auto;
 }
 
+#contact,
 #about {
   position: relative;
-  z-index: 10;
+  z-index: 4;
   color: white;
   background-color: black;
   padding-top: 6rem;
@@ -200,4 +217,38 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#contact {
+  background-color: cyan;
+}
+
+#contact header h1 {
+  color: black;
+  border-color: black;
+  box-shadow: 1px 4px 10px black;
+}
+
+#contact .stack {
+  margin-top: 2rem;
+}
+#contact .btn {
+  font-size: 1.3rem;
+  border-color: black;
+  color: black;
+}
+
+#contact .btn:hover {
+  box-shadow: 1px 4px 10px black;
+}
+
+footer {
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: cyan;
 }
