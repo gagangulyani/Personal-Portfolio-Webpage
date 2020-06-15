@@ -1,0 +1,163 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+#navbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+#navbar div {
+  margin-left: auto;
+}
+.nav-link {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: cyan;
+  height: 100vh;
+}
+#welcome-section h1 {
+  font-size: 3rem;
+  padding: 0.3rem;
+}
+
+#welcome-section h1,
+#projects h1 {
+  text-shadow: 1px 5px 5px rgba(0, 0, 0, 0.4);
+}
+#projects {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+}
+
+#projects header h1 {
+  font-size: 2rem;
+  border: 5px solid white;
+  display: inline;
+  padding: 0.6rem;
+}
+#projects header p {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+#projects header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  /* padding: 1rem; */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.project {
+  color: white;
+  width: 90%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid cyan;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.project-image-container {
+  width: 40vw;
+  margin: 1rem;
+  align-self: center;
+}
+.project-img {
+  width: 100%;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5), 0px 5px 10px 10px cyan;
+}
+.project-details h1 {
+  text-decoration: underline;
+  text-shadow: 5px 4px 10px white;
+}
+.project-details {
+  width: 50%;
+  border: 2px solid red;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  align-self: center;
+}
+.project-image-container,
+.project-details,
+.btn {
+  transition: all 0.3s ease;
+}
+.project-details:hover {
+  background-color: aqua;
+  color: black;
+  border-color: black;
+}
+
+.project-details:hover .btn-link {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.btn {
+  display: block;
+  margin: 1rem;
+  padding: 0.4rem;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.project-details:hover .btn-link:hover {
+  box-shadow: 1px 5px 10px black;
+  border-radius: 4rem;
+}
+@media (max-width: 1024px) {
+  .project {
+    flex-direction: column;
+  }
+  .project-details,
+  .project-image-container {
+    width: 90%;
+  }
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
