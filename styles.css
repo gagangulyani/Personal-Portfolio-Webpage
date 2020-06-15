@@ -40,8 +40,11 @@ body {
     padding-bottom: 1rem;
   }
   #navbar div .nav-link {
-      margin: 0;
-      font-size: 1.2rem;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  footer {
+    font-size: 0.5rem;
   }
 }
 #welcome-section {
