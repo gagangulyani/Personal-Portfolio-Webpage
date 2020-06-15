@@ -5,13 +5,15 @@ body {
 }
 
 #navbar {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   height: 10vh;
+  z-index: 10000;
+  box-shadow: 0px 1px 10px black, 0px 1px 10px cyan;
 }
 #navbar div {
   margin-left: auto;
@@ -36,8 +38,12 @@ body {
   height: 100vh;
 }
 #welcome-section h1 {
+  position: fixed;
+  left: 0;
+  right: 0;
   font-size: 3rem;
   padding: 0.3rem;
+  z-index: 2;
 }
 
 #welcome-section h1,
@@ -48,9 +54,12 @@ body {
   background-color: black;
   color: white;
   margin: 0;
-  padding: 1rem;
+  position: absolute;
+  z-index: 4;
+  padding-top: 6rem;
 }
 
+#about header h1,
 #projects header h1 {
   font-size: 2rem;
   border: 5px solid white;
@@ -77,8 +86,6 @@ body {
   color: white;
   width: 90%;
   margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
   border: 2px solid cyan;
   display: flex;
   flex-direction: row;
@@ -147,6 +154,7 @@ body {
   box-shadow: 1px 5px 10px black;
   border-radius: 4rem;
 }
+
 @media (max-width: 1024px) {
   .project {
     flex-direction: column;
@@ -157,7 +165,39 @@ body {
   }
 }
 
-.mx-auto{
-    margin-left: auto;
-    margin-right: auto;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about {
+  position: relative;
+  z-index: 10;
+  color: white;
+  background-color: black;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  border-bottom: 4px solid cyan;
+}
+
+#about-details p {
+  width: 80%;
+  margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 1.2rem;
+}
+
+#about-details .btn {
+  font-size: 1.2rem;
+}
+
+#tech-stack {
+  padding: 2rem;
+}
+#tech-stack .stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
